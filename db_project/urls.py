@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 
-admin.site.site_header = 'Chekhov'
+admin.site.site_header = 'Get Fit!'
 admin.site.index_title = 'Gym management system'
 admin.site.site_title = 'Gym management system'
 

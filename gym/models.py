@@ -251,9 +251,13 @@ class Purchase(models.Model):
         return f"{self.brand_name}, {self.deposit_number}"
 
 
-class Orders(models.Model):
+class Order(models.Model):
     manager = models.ForeignKey(Manager, on_delete=models.CASCADE, null=False)
     retailer_name = models.ForeignKey(Supplier, on_delete=models.CASCADE, null=False)
 
     def __str__(self):
         return f"{self.manager}, {self.retailer_name}"
+
+    class Meta:
+        verbose_name = 'Order'
+        verbose_name_plural = 'Orders'

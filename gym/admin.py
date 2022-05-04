@@ -19,7 +19,7 @@ from .models import (Person,
                      SportsWear,
                      Nutrition,
                      Purchase,
-                     Orders,
+                     Order,
                      )
 
 
@@ -144,7 +144,7 @@ class PurchaseAdmin(admin.ModelAdmin):
     search_fields = ('brand_name__brand_name', 'deposit_number__number',)
 
 
-@admin.register(Orders)
+@admin.register(Order)
 class OrdersAdmin(admin.ModelAdmin):
     list_display = ('manager', 'retailer_name',)
     search_fields = ('manager__name', 'retailer_name__retailer_name',)
